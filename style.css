@@ -1,0 +1,1221 @@
+/* General */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Rubik', Light 300 Italic;
+    scroll-margin-top: 30px;
+}
+
+body {
+    background-color: var(--color1);
+    color: white;
+    font-size: 16px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --color1: #020403;
+    --color2: #ADADAD;
+    --color3: #FFFFFF;
+}  
+
+/* Menu */
+
+nav {
+    height: 50px;
+    width: 100%;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+    z-index: 2;
+
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 45px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 18px;
+    padding: 7px 13px;
+}
+
+.fa {
+    font-size: 25px;
+    z-index: 2;
+}
+
+.fa-bars {
+    display: none;
+}
+
+/*Imagen*/
+
+.log__container img {
+    display: none;
+}
+
+#imagen {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#imagen h3 {
+    margin: 35px 0 20px 0;
+    font-size: 20px;
+    color: var(--color2);
+    opacity: 0.8;
+}
+
+#imagen h1 {
+    font-size: 40px;
+}
+
+.iconos {
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.iconos i {
+    font-size: 40px; 
+    text-shadow: 1px 1px 2px white;  
+    color: var(--color1); 
+}
+
+/* Acerca de mi */
+
+#Acerca_de_mi {
+    margin: 70px 20px 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#Acerca_de_mi h3 {
+    font-size: 25px;
+}
+
+#Acerca_de_mi p {
+    margin-top: 35px;
+    text-align: center;
+    color: var(--color2);
+    opacity: 0.8;
+    z-index: -1;
+}
+
+/* Mis habilidades */
+
+#Mis_habilidades {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 70px;
+}
+
+#Mis_habilidades h3{
+    margin-bottom: 35px;
+    font-size: 25px;
+}
+
+.contenido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.icon {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.icon img {
+    z-index: 1;
+}
+
+.icon a {
+    font-size: 30px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    background-color: #262322;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+}
+
+.icon h5 {
+    text-align: center;
+}
+
+/* Animacion icono inicio */
+.efecto {
+    position: relative;
+}
+
+.icono__click i {
+    font-size: 30px;
+    color: whitesmoke;
+}
+
+.tamaño  {
+    width: 65px;
+}
+
+.icono__click {
+    border-radius: 50%;
+    text-align: center;
+    padding: 10px 15px;
+    line-height: 2em;
+    text-align: center;
+    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    background-size: 300%;
+    border-radius: 40px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.icono__click:hover {
+    animation: animate 8s linear infinite;
+    border: none;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 500%;
+    }
+}
+
+.icono__click::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg,#001291,#001291,#096bb4,#102a4c);
+    background-size: 400%;
+    border-radius: 35px;
+    transition: 1s;
+}
+
+.icono__click:hover::before {
+    filter: blur(20px);
+}
+
+.icono__click:active {
+    background: linear-gradient(32deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+}
+/* Animacion icono fin */
+
+/* Animacion icono (Mis habilidades) inicio */
+.animar__icono a {
+    position: relative;
+    color: #fff;
+    padding: 10px 30px;
+    transition: 0.5s;
+}
+
+.animar__icono a:hover {
+    background: var(--clr);
+    color: var(--clr);
+    letter-spacing: 0.25em;
+    box-shadow: 0 0 35px var(--clr);
+}
+
+.animar__icono a:before {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background: black;
+    border-radius: 50%;
+}
+
+    /* h5 (Mis habilidades) */
+
+.icon h5 {
+    color: #fff;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px #ab57a8,
+                 0 0 20px #ab57a8,
+                 0 0 40px #ab57a8,
+                 0 0 80px #ab57a8,
+                 0 0 120px #ab57a8;
+}
+
+/* Animacion icono (Mis habilidades) fin */
+
+/* Experiencia */
+
+#Experiencia {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 70px;
+    width: 100%;
+}
+
+#Experiencia h3{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+
+}
+
+.exp {
+    display: flex;
+    justify-content: start;
+    gap: 70px;
+    margin: 10px 30px 0 30px;
+    border-bottom: 2px solid #ab57a8;
+}
+
+.exp p {
+    color: var(--color2);
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+.exp h5 {
+    color: white;
+}
+
+.border__none {
+    border: none;
+}
+
+/*Portafolio*/
+
+.portafolio__container {
+    display: flex;
+    justify-content: center;   
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+#Portafolio h3 {
+    font-size: 25px;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.port img {
+    height: 250px;
+    width: 300px;
+}
+
+/* Efecto carta inicio */
+    @property --rotate {
+        syntax: "<angle>";
+        initial-value: 132deg;
+        inherits: false;
+    }
+
+    :root {
+        --port-height: 65vh;
+        --port-width: calc(var(--port-height) / 1.5);
+    }
+
+    .port {
+        background: #191c29;
+        width: 330px;
+        height: 280px;
+        padding: 3px;
+        position: relative;
+        border-radius: 6px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        font-size: 1.5em;
+        cursor: pointer;
+        font-family: cursive;
+    }
+    
+    .port:hover {
+        color: rgb(88 199 250 / 100%);
+        transition: color 1s;
+    }
+    
+    .port:hover:before,
+    .port:hover:after {
+        animation: none;
+        opacity: 0;
+    }
+    
+    .port::before {
+        content: "";
+        width: 104%;
+        height: 102%;
+        border-radius: 8px;
+        background-image: linear-gradient( var(--rotate), #5ddcff,#3c67e3 43%,#4e00c2);
+        position: absolute;
+        z-index: -1;
+        top: -1%;
+        left: -2%;
+        animation: spin 2.5s linear infinite;
+    }
+    
+    .port::after {
+        position: absolute;
+        content: "";
+        top: calc(var(--port-height) / 6);
+        left: 0;
+        right: 0;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        transform: scale(0.8);
+        filter: blur(calc(var(--port-height) / 6));
+        background-image: linear-gradient( var(--rotate), #5ddcff,#3c67e3 43%,#4e00c2);
+        opacity: 1;
+        transition: opacity .5s;
+        animation: spin 2.5s linear infinite;
+    }
+    
+    @keyframes spin {
+        0% {
+            --rotate: 0deg;
+        }
+    
+        100% {
+            --rotate: 360deg;
+        }
+    }
+
+/* Efecto carta fin */
+
+/*Contacto*/
+
+#Contacto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 70px 0 70px 0;
+}
+
+#Contacto h3 {
+    font-size: 25px;
+}
+
+.icono__click i{
+    font-size: 40px;
+}
+
+.fot {
+    margin-top: 30px;
+    margin-bottom: 70px;
+    display: flex;
+    gap: 70px;
+}
+
+.fot1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.fot1 a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 40px;
+}
+
+.error {
+    padding: 0 20px;    
+}
+
+.fot1 h6 {
+    margin: 20px 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.fot1 p {
+    font-size: 15px;
+    color: var(--color2);
+    opacity: 0.8;
+    text-align: center;
+}
+
+/* Animacion contacto inicio */
+    /*-----misma animacion de iconos----*/
+/* Animacion contacto fin */
+
+/*Efecto subtitulo (inicio)*/
+.box h3 {
+    color: #fff;
+    font-size: 5em;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px #00b3ff,
+                 0 0 20px #00b3ff,
+                 0 0 40px #00b3ff,
+                 0 0 80px #00b3ff,
+                 0 0 120px #00b3ff;
+}
+/*Efecto subtitulo (fin)*/
+
+/*Texto final*/
+
+.texto__final {
+    display: grid;
+    place-items: center;
+}
+
+.texto__final__animado {
+    width: 27ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite;
+    animation-iteration-count: infinite;
+    animation-duration: 2.5s;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    95% {
+        border-color: transparent;
+    }
+}
+
+/*Responsive movil*/
+
+@media ( max-width: 500px) {
+
+    * {
+        scroll-margin-top: 30px;
+    }
+/*Menu*/
+    .menu__show a {
+        background-color: #003093;
+        opacity: 0.8;
+        border-radius: 10px;
+    }
+
+    .move {
+        display: flex;
+        justify-content: end;
+    }
+
+    .navbar a {
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .fa-bars {
+        display: block;
+        cursor: pointer;
+        margin: 30px;
+        position: fixed;
+    }
+
+    .menu {
+        background-color: rgba(255,255, 255, 0.20);
+        backdrop-filter: blur(15px);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 80%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+        margin-left: -200%;
+        transition: margin-left 0.5s;
+    }
+
+    .menu_show {
+        margin-left: 0;
+    }
+
+/* Animacion foto inicio */
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+}
+
+:root {
+    --animacion__foto-height: 65vh;
+    --animacion__foto-width: calc(var(--port-height) / 1.5);
+}
+
+.animacion__foto {
+    background: #191c29;
+    width: 175px;
+    height: 205px;
+    position: relative;
+    border-radius: 110px 110px 110px 110px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.animacion__foto:hover {
+    color: rgb(88 199 250 / 100%);
+    transition: color 1s;
+}
+
+.animacion__foto::before {
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 110px 110px 110px 110px;
+    background-image: linear-gradient( var(--rotate), #5ddcff,#3c67e3 43%,#4e00c2);
+    position: absolute;
+    z-index: -1;
+    animation: spin 2.5s linear infinite;
+}
+
+.animacion__foto::after {
+    position: absolute;
+    content: "";
+    top: calc(var(--port-height) / 6);
+    z-index: -1;
+    height: 70%;
+    width: 100%;
+    transform: scale(0.8);
+    filter: blur(calc(var(--port-height) / 6));
+    background-image: linear-gradient( var(--rotate), #5ddcff,#3c67e3 43%,#4e00c2);
+    opacity: 1;
+    transition: opacity .5s;
+    animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        --rotate: 0deg;
+    }
+
+    100% {
+        --rotate: 360deg;
+    }
+}
+
+/* Animacion foto fin */
+
+
+}
+
+/* Responsive tablet */
+
+@media (min-width: 500px) and (max-width: 1000px) {
+   
+    * {
+        scroll-margin-top: 30px;
+    }
+
+    /*Menu*/
+    .menu__show a {
+        background-color: #003093;
+        opacity: 0.8;
+        border-radius: 10px;
+    }
+
+    .move {
+        display: flex;
+        justify-content: end;
+    }
+
+    .navbar a {
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .fa-bars {
+        display: block;
+        cursor: pointer;
+        margin: 30px;
+        position: fixed;
+    }
+
+    .menu {
+        background-color: rgba(255,255, 255, 0.20);
+        backdrop-filter: blur(15px);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 50%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+        margin-left: -200%;
+        transition: margin-left 0.5s;
+    }
+
+    .menu_show {
+        margin-left: 0;
+    }
+
+    /* Acerca de mi */
+
+    #Acerca_de_mi {
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+
+    /* Mis habilidades */
+
+    .contenido {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 80px;
+    }
+
+    .extra_margin {
+        margin-bottom: 35px;
+    }
+
+    /* Experiencia */
+
+    .exps {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .exp {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .border__none {
+        border-bottom: 2px solid #ab57a8;
+    }
+
+    /* Animacion foto inicio */
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+}
+
+:root {
+    --animacion__foto-height: 65vh;
+    --animacion__foto-width: calc(var(--port-height) / 1.5);
+}
+
+.animacion__foto {
+    background: #191c29;
+    width: 175px;
+    height: 205px;
+    position: relative;
+    border-radius: 110px 110px 110px 110px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.animacion__foto:hover {
+    color: rgb(88 199 250 / 100%);
+    transition: color 1s;
+}
+
+.animacion__foto::before {
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 110px 110px 110px 110px;
+    background-image: linear-gradient( var(--rotate), #5ddcff,#3c67e3 43%,#4e00c2);
+    position: absolute;
+    z-index: -1;
+    animation: spin 2.5s linear infinite;
+}
+
+.animacion__foto::after {
+    position: absolute;
+    content: "";
+    top: calc(var(--port-height) / 6);
+    z-index: -1;
+    height: 70%;
+    width: 100%;
+    transform: scale(0.8);
+    filter: blur(calc(var(--port-height) / 6));
+    background-image: linear-gradient( var(--rotate), #5ddcff,#3c67e3 43%,#4e00c2);
+    opacity: 1;
+    transition: opacity .5s;
+    animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        --rotate: 0deg;
+    }
+
+    100% {
+        --rotate: 360deg;
+    }
+}
+
+/* Animacion foto fin */
+
+}
+
+/* Responsive desktop de 1001px a mas */
+
+@media (min-width: 1001px) {
+
+    * {
+        scroll-margin-top: 85px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: all 0.35s ease;
+        transition: all 0.35s ease;
+    }
+
+    /* Menu */
+
+    .icon a {
+        z-index: 1;
+    }
+
+    nav {
+        background-color: var(--color1);
+        position: fixed;
+        width: 100%;
+        height: 10vh;      
+        z-index: 2;
+    }
+
+    nav ul {
+        display: flex;
+        margin-right: 70px;
+        padding: 5px;
+        gap: 30px;
+    }
+
+    nav ul li a {
+        color: var(--color2);
+
+    }
+
+    .menu__show {
+        margin-top: 5px;
+    }
+
+    /* Animacion menu nav (inicio) */
+    .menu__show a {
+        position: relative;
+        color: rgba(205, 207, 205, 0.5);
+        padding: 0.5rem 0.8rem;
+        text-decoration: none;
+    }
+    
+    .menu__show a:before,
+    .menu__show a:after {
+        position: absolute;
+        height: 15px;
+        width: 15px;
+        content: "";
+        -webkit-transition: all 0.35s ease;
+        transition: all 0.35s ease;
+        opacity: 0;
+    }
+    
+    .menu__show a:before {
+        right: 0;
+        top: 0;
+        border-right: 3px solid #07d111;
+        border-top: 3px solid #07d111;
+        -webkit-transform: translate(-100%,50%);
+        transform: translate(100%,-50%);
+    }
+    
+    .menu__show a:after {
+        left: 0;
+        bottom: 0;
+        border-left: 3px solid #07d111;
+        border-bottom: 3px solid #07d111;
+        -webkit-transform: translate(100%,-50%);
+        transform: translate(100%,-50%);
+    }
+    
+    .menu__show a:hover,
+    .menu__show .home a {
+        color: #ffffff;
+    }
+    
+    .menu__show a:hover:before,
+    .menu__show .home a:before,
+    .menu__show a:hover:after,
+    .menu__show .home a:after {
+        -webkit-transform: translate(0%,0%);
+        transform: translate(0%,0%);
+        opacity: 1;
+    }
+    /* Animacion menu nav (inicio) */
+
+    /* Diseñador y desarrolador web */
+
+    #imagen {
+        padding-top: 70px;
+    }
+
+    .animacion__foto img {
+        display: none;       
+       
+    }
+
+    .log__container img {
+        width: 220px;
+        height: 260px;
+        margin-top: 32px;
+        margin-bottom: 30px;
+        z-index: 1;
+        display: flex;
+    }
+
+    #imagen h3 {
+        font-size: 30px;
+        margin-top: 60px;
+        margin-bottom: 10px;
+    }
+
+    #imagen h1 {
+        font-size: 45px;
+    }
+
+    .iconos {
+        gap: 100px;
+        margin-top: 25px;
+    }
+
+    .iconos i {
+        font-size: 45px;
+    }
+
+    /* Acerca de mi */
+
+    #Acerca_de_mi h3 {
+        font-size: 30px;
+    }
+
+    #Acerca_de_mi p {
+        font-size: 20px;
+        margin: 20px 170px 0 170px;
+    }
+
+    /* Mis habilidades */
+
+    #Mis_habilidades h3 {
+        font-size: 30px;
+    }
+
+    .contenido {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 80px;
+    }
+    
+    .contenido {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 140px;
+    }
+
+    .extra_margin {
+        margin-bottom: 35px;
+    }
+
+    /* Experiencia */
+
+    #Experiencia h3 {
+        font-size: 30px;
+        margin-bottom: 35px;
+    }
+
+    #Experiencia {
+        display: flex;
+        align-items: center;
+    }
+
+    .exps {
+        width: 600px;
+    }
+
+    .exp {
+        display: flex;
+        gap: 160px;
+    }
+
+    /* Portafolio */
+
+    #Portafolio h3 {
+        font-size: 30px;
+    }
+
+    .portafolio__container {
+        gap: 50px;
+    }
+
+/* Animacion foto inicio */
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+}
+
+:root {
+    --img-container-height: 65vh;
+    --img-container-width: calc(var(--port-height) / 1.5);
+}
+
+.log__container {
+    background: #191c29;
+    width: 225px;
+    height: 255px;
+    position: relative;
+    border-radius: 110px 110px 110px 110px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    top: 20px;
+}
+
+.log__container:hover {
+    color: rgb(88 199 250 / 100%);
+    transition: color 1s;
+}
+
+.log__container::before {
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 110px 110px 110px 110px;
+    background-image: linear-gradient( var(--rotate), #5ddcff,#3c67e3 43%,#4e00c2);
+    position: absolute;
+    animation: spin 2.5s linear infinite;
+}
+
+.log__container::after {
+    position: absolute;
+    content: "";
+    top: calc(var(--port-height) / 6);
+
+    height: 70%;
+    width: 100%;
+    transform: scale(0.8);
+    filter: blur(calc(var(--port-height) / 6));
+    background-image: linear-gradient( var(--rotate), #5ddcff,#3c67e3 43%,#4e00c2);
+    opacity: 1;
+    transition: opacity .5s;
+    animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        --rotate: 0deg;
+    }
+
+    100% {
+        --rotate: 360deg;
+    }
+}
+
+/* Animacion foto fin */
+
+    /*Animacion burbujas inicio*/
+.burbuja {
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: .3;
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    animation: burbujas 3s linear infinite;
+    bottom: -150px;
+    z-index: -1;
+}
+
+@keyframes burbujas {
+    0% {
+        bottom: 0;
+        opacity: 0;
+    }
+    30% {
+        transform: translateX(30px);
+    }
+    50% {
+        opacity: .4;
+    }
+    100% {
+        bottom: 100vh;
+        opacity: 0;
+    }
+}
+
+.burbuja:nth-child(1) {
+    width: 80px;
+    height: 80px;
+    left: 5%;
+    animation-duration: 3s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(2) {
+    width: 100px;
+    height: 100px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(3) {
+    width: 20px;
+    height: 20px;
+    left: 15%;
+    animation-duration: 1.5s;
+    animation-delay: 7s;
+}
+
+.burbuja:nth-child(4) {
+    width: 50px;
+    height: 50px;
+    left: 90%;
+    animation-duration: 6s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(5) {
+    width: 70px;
+    height: 70px;
+    left: 65%;
+    animation-duration: 3s;
+    animation-delay: 1s;
+}
+
+.burbuja:nth-child(6) {
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    animation-duration: 4s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(7) {
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    animation-duration: 4s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(8) {
+    width: 100px;
+    height: 100px;
+    left: 52%;
+    animation-duration: 5s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(9) {
+    width: 65px;
+    height: 65px;
+    left: 51%;
+    animation-duration: 3s;
+    animation-delay: 2s;
+}
+
+.burbuja:nth-child(10) {
+    width: 40px;
+    height: 40px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 4s;
+}
+
+/*Animacion burbujas fin*/
+
+/*Animacion imagen inicio*/
+
+@keyframes movimiento {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(30px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.log__container {
+    animation: movimiento 2.5s linear infinite;
+}
+/*Animacion imagen fin*/
+
+}
+
+
+
+
+
+
+
+
+
+
+
